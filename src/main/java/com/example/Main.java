@@ -52,7 +52,12 @@ public class Main {
   String index() {
     return "index";
   }
-
+  
+  @RequestMapping("/test")
+  String testing()
+  {
+    return "Hello bro";
+  }
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
